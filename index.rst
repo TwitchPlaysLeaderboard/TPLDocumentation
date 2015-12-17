@@ -14,3 +14,5 @@ stream.
    match
    songs
    search
+
+.. _Twitch Plays Pokemon: http://twitch.tv/twitchplayspokemon

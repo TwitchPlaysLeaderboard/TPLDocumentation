@@ -78,5 +78,3 @@ The API is structured into the following categories:
 |               | specified     |
 |               | user.         |
 +---------------+---------------+
-
-.. _Twitch Plays Pokemon: http://twitch.tv/twitchplayspokemon
