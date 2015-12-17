@@ -6,6 +6,15 @@ TwitchPlaysLeaderboard provides an open JSON api to developers for
 manipulating of the data collected from the `Twitch Plays Pokemon`_
 stream.
 
+.. toctree::
+   :maxdepth: 2
+   
+   index
+   user
+   match
+   songs
+   search
+
 Getting Started
 ---------------
 
@@ -88,12 +97,3 @@ The API is structured into the following categories:
 +---------------+---------------+
 
 .. _Twitch Plays Pokemon: http://twitch.tv/twitchplayspokemon
-
-.. toctree::
-   :maxdepth: 2
-   
-   index
-   user
-   match
-   songs
-   search
