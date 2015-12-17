@@ -1,4 +1,4 @@
-API Endpoint: ``/search/``
+Endpoint: ``/search/``
 --------------------------
 
 .

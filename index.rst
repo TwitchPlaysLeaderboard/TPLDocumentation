@@ -90,3 +90,7 @@ The API is structured into the following categories:
    :maxdepth: 2
    
    index
+   user
+   match
+   songs
+   search

@@ -1,4 +1,4 @@
-API Endpoint: ``/user/``
+Endpoint: ``/user/``
 ------------------------
 
 The ``/user/`` endpoint contains user bet and balance data:
