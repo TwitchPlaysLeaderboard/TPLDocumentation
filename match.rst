@@ -52,8 +52,8 @@ battle predictor`_.
    pokemon. If a name matches multiple pokemon, the prediction is not
    ran and an error is returned stating which pokemon were matched.
 
-Example: ``/match/predict/1,Ivy,3/4,5,6/``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example: Valid prediction request
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description:** Example of a valid prediction request with the result
 data.
@@ -124,8 +124,8 @@ data.
         ]
     }
 
-Example: Multiple pokemon matches ``/match/predict/1,2,3/Char,5,6/``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example: Request with multiple possible matches
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description:** Example of a prediction error that returns multiple
 partial name matches for ``Char``.
