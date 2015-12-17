@@ -1,10 +1,13 @@
+TwitchPlaysLeaderboard.info API Documentation
+=============================================
+
 Welcome to the api documentation for TwitchPlaysLeaderboard.info.
 TwitchPlaysLeaderboard provides an open JSON api to developers for
 manipulating of the data collected from the `Twitch Plays Pokemon`_
 stream.
 
 Getting Started
-===============
+---------------
 
 The API is publically accessible and returns data in JSON format.
 Requests are made using HTTP GET. The API is accessible on ``http`` or
@@ -21,14 +24,14 @@ been returned when all the following are true:
 occurred.**
 
 Callbacks
----------
+~~~~~~~~~
 
 The API conforms to the JSONP specification and accepts a GET parameter
 ``?callback=`` which can be used to allow cross-domain API requests from
 your own website with JavaScript, jQuery, etc.
 
 Handling Errors
----------------
+~~~~~~~~~~~~~~~
 
 The API will return an error object similar to the one shown below when
 an error occurred. However, this is **not** the only way an error can be
@@ -44,7 +47,7 @@ returned (see above).
 **Note:** In some cases, an ``exception`` will also be returned.
 
 API structure
-=============
+-------------
 
 The API is structured into the following categories:
 
