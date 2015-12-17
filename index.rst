@@ -1,6 +1,3 @@
-TwitchPlaysLeaderboard.info API Documentation
-=============================================
-
 Welcome to the api documentation for TwitchPlaysLeaderboard.info.
 TwitchPlaysLeaderboard provides an open JSON api to developers for
 manipulating of the data collected from the `Twitch Plays Pokemon`_
@@ -93,7 +90,3 @@ The API is structured into the following categories:
    :maxdepth: 2
    
    index
-   user
-   match
-   songs
-   search
