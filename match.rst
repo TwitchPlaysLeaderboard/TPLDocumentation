@@ -41,8 +41,9 @@ Endpoint: ``/match/``
 Endpoint: ``/match/predict/``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| *Description:* Predicts the result of a matchup using `Beesafree’s battle predictor`_.
-| *Accepted Parameters:*
+*Description:* Predicts the result of a matchup using `Beesafree’s battle predictor`_.
+
+*Accepted Parameters:*
 
 -  ``None``: Predicts the current matchup of pokemon, returns
    an error if the pokemon have not yet been revealed.
@@ -54,7 +55,7 @@ Endpoint: ``/match/predict/``
    the pokemon has multiple forms you can use the form name after the pokedex
    id or in the full name **Example:** ``493water`` OR ``Arceus Water``
 
-| *Returns:*
+*Returns:*
 |   When a successful request is made, the API will return a JSON object structured as follows:
 |   See the `Example: Successful prediction request`_ below.
 
