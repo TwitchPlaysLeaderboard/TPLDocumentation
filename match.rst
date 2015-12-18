@@ -56,6 +56,7 @@ Endpoint: ``/match/predict/``
    id or in the full name **Example:** ``493water`` OR ``Arceus Water``
 
 *Returns:*
+
 | When a successful request is made, the API will return a JSON object structured as follows:
 | See the `Example: Successful prediction request`_ below.
 
