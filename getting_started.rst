@@ -5,8 +5,8 @@ The API is publically accessible and returns data in JSON format.
 Requests are made using HTTP GET. The API is accessible on ``http`` or
 ``https`` at: ``api.twitchplaysleaderboard.info``
 
-All endpoints will return data in similar ways. A valid response has
-been returned when all the following are true:
+All endpoints return data in similar ways. A valid API response has been 
+returned when all the following are true:
 
 -  The HTTP response code is 200 OK.
 -  The api returned a header of ``Content-Type : application/json``

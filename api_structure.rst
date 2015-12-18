@@ -13,13 +13,13 @@ The API is structured into the following categories:
 |               | balance, bet  |
 |               | history,      |
 |               | token match   |
-|               | requests…     |
+|               | requests      |
 +---------------+---------------+
 | /match/       | Match results |
 |               | including the |
 |               | current match |
 |               | and user bet  |
-|               | information.. |
+|               | information   |
 +---------------+---------------+
 | /songs/       | Song database |
 |               | information,  |
@@ -27,7 +27,7 @@ The API is structured into the following categories:
 |               | requests,     |
 |               | current       |
 |               | playing,      |
-|               | recent songs… |
+|               | recent songs  |
 +---------------+---------------+
 | /search/      | Searches for  |
 |               | matches with  |
@@ -36,5 +36,5 @@ The API is structured into the following categories:
 |               | with bids     |
 |               | from a        |
 |               | specified     |
-|               | user.         |
+|               | user          |
 +---------------+---------------+
