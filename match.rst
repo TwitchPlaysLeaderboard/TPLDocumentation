@@ -1,62 +1,62 @@
 Endpoint: ``/match/``
 -------------------------
 
-+---------------+---------------+
-| URL           | Description   |
-+===============+===============+
-| /match/predic | Predicts the  |
-| t             | result of the |
-|               | match using   |
-|               | `Beesafree’s  |
-|               | battle        |
-|               | predictor`_.  |
-+---------------+---------------+
-| /match/curren | Details of    |
-| t             | the current   |
-|               | or last       |
-|               | played match  |
-|               | including     |
-|               | pokemon and   |
-|               | bets.         |
-+---------------+---------------+
-| /match/[numbe | Details of    |
-| r]            | the match     |
-|               | specified by  |
-|               | ``[number]``  |
-|               | including     |
-|               | pokemon and   |
-|               | bets.         |
-+---------------+---------------+
-| /match/winrat | Number of     |
-| e             | played        |
-|               | matches and   |
-|               | number of     |
-|               | matches won   |
-|               | for each      |
-|               | pokemon.      |
-+---------------+---------------+
++------------------------------+------------------------------+
+| URL                          | Description                  |
++==============================+==============================+
+| /match/predict               | Predicts the                 |
+|                              | result of the                |
+|                              | match using                  |
+|                              | `Beesafree’s                 |
+|                              | battle                       |
+|                              | predictor`_.                 |
++------------------------------+------------------------------+
+| /match/current               | Details of                   |
+|                              | the current                  |
+|                              | or last                      |
+|                              | played match                 |
+|                              | including                    |
+|                              | pokemon and                  |
+|                              | bets.                        |
++------------------------------+------------------------------+
+| /match/[number]              | Details of                   |
+|                              | the match                    |
+|                              | specified by                 |
+|                              | ``[number]``                 |
+|                              | including                    |
+|                              | pokemon and                  |
+|                              | bets.                        |
++------------------------------+------------------------------+
+| /match/winrate               | Number of                    |
+|                              | played                       |
+|                              | matches and                  |
+|                              | number of                    |
+|                              | matches won                  |
+|                              | for each                     |
+|                              | pokemon.                     |
++------------------------------+------------------------------+
 
-Endpoint: ``/match/predict/``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``/match/predict/`` Endpoint
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*Description:* Predicts the result of the match using `Beesafree’s
-battle predictor`_.
+*Description:* Predicts the result of a matchup using `Beesafree’s battle predictor`_.
 
 *Accepts Parameters:*
 
--  ``/match/predict/``: Predicts the current matchup of pokemon, returns
+-  ``None``: Predicts the current matchup of pokemon, returns
    an error if the pokemon have not yet been revealed.
 -  ``/match/predict/1,Ivysaur,3/4,5,6/``: Predicts the specified
    matchup. Request must contain exactly 6 pokemon in teams of 3. Each
    pokemon can either be the pokedex id or a partial name match to a
    pokemon. If a name matches multiple pokemon, the prediction is not
-   ran and an error is returned stating which pokemon were matched.
+   ran and an error is returned stating which pokemon were matched. If
+   the pokemon has multiple forms you can use the form name after the pokedex
+   id or in the full name **Example:** ``493water`` OR ``Arceus Water``
 
 Example: Valid prediction request
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Description:** Example of a valid prediction request with the result
-data.
+**Description:** Example of a valid prediction request with the returned result data.
 
 **Request URI:**
 ``https://api.twitchplaysleaderboard.info/match/predict/1,Ivy,3/4,5,6/``
@@ -128,16 +128,44 @@ Example: Request with multiple possible matches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description:** Example of a prediction error that returns multiple
-partial name matches for ``Char``.
+partial name matches for ``Char`` and therefore the request fails.
 
 **Request URI:**
 ``https://api.twitchplaysleaderboard.info/match/predict/1,2,3/Char,5,6/``
 
-| \`\`\`
-| {
-|  “success”: false,
-|  “predictor”: {
-|  “version”: null,
-|  “last\_modi
+::
+
+{
+	"success": false,
+	"predictor": {
+		"version": null,
+		"last_modified": 1446407657
+	},
+	"error": "Multiple results found, please be more specific",
+	"error_detail": {
+		"Char": [
+			{
+				"dexNumber": 4,
+				"name": "Charmander",
+				"visualizerIndex": "4"
+			},
+			{
+				"dexNumber": 5,
+				"name": "Charmeleon",
+				"visualizerIndex": "5"
+			},
+			{
+				"dexNumber": 6,
+				"name": "Charizard",
+				"visualizerIndex": "6"
+			},
+			{
+				"dexNumber": 390,
+				"name": "Chimchar",
+				"visualizerIndex": "390"
+			}
+		]
+	}
+}
 
 .. _Beesafree’s battle predictor: https://www.reddit.com/r/twitchplayspokemon/comments/38249f/beesafrees_battle_predictor_pbrmm/
