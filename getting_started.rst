@@ -29,7 +29,7 @@ The API will return an error object similar to the one shown below when
 an error occurred. However, this is **not** the only way an error can be
 returned.
 
-**IMPORTANT:** In rare cases, a CloudFlare error page may be returned instead of a JSON error page.
+**IMPORTANT:** In rare cases, a CloudFlare error page may be returned instead of a JSON formatted response.
 
 ::
 
