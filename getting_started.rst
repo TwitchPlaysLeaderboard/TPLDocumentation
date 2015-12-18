@@ -27,7 +27,9 @@ Handling Errors
 
 The API will return an error object similar to the one shown below when
 an error occurred. However, this is **not** the only way an error can be
-returned (see above).
+returned.
+
+**IMPORTANT:** In rare cases, a CloudFlare error page may be returned instead of a JSON error page.
 
 ::
 
@@ -37,3 +39,10 @@ returned (see above).
     }
 
 **Note:** In some cases, an ``exception`` will also be returned.
+
+
+The request is considered to be an error if any of the following occur:
+
+-  The HTTP response code is **NOT** 200 OK.
+-  The HTTP header is **NOT** ``Content-Type : application/json``
+-  The JSON data  did **NOT** returned a property of ``success : true``
