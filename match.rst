@@ -93,6 +93,8 @@ Example: Successful prediction request
 **Request URI:**
 ``https://api.twitchplaysleaderboard.info/match/predict/1,Ivy,3/4,5,6/``
 
+**Note:** In addition to the returned error data below, the request will also be a ``HTTP 400 Bad Request``.
+
 ::
 
     {
