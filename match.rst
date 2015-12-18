@@ -56,7 +56,8 @@ Endpoint: ``/match/predict/``
 *Returns:*
 
 When a successful request is made, the API will return a JSON object structured as follows:
-See the `Example: Successful prediction request_` below.
+
+See the `Example: Successful prediction request`_ below.
 
 - ``success`` will be ``true``
 - ``predictor`` contains details on the prediction engine used such as the 
@@ -198,4 +199,4 @@ partial name matches for ``Char`` and therefore the request fails.
 	}
 
 .. _Beesafree’s battle predictor: https://www.reddit.com/r/twitchplayspokemon/comments/38249f/beesafrees_battle_predictor_pbrmm/
-.. _TPPVisuals http://tppvisuals.com
+.. _TPPVisuals: http://tppvisuals.com
