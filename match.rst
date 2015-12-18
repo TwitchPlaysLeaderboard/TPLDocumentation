@@ -59,9 +59,8 @@ Endpoint: ``/match/predict/``
    
 *Returns:*
 
-When a successful request is made, the API will return a JSON object structured as follows:
-
-See the `Example: Successful prediction request`_ below.
+| When a successful request is made, the API will return a JSON object structured as follows:
+| See the `Example: Successful prediction request`_ below.
 
 - ``success`` will be ``true``
 - ``predictor`` contains details on the prediction engine used such as the 
