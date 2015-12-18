@@ -53,6 +53,35 @@ Endpoint: ``/match/predict/``
    the pokemon has multiple forms you can use the form name after the pokedex
    id or in the full name **Example:** ``493water`` OR ``Arceus Water``
 
+*Returns:*
+
+When a successful request is made, the API will return a JSON object structured as follows:
+See the `Example: Successful prediction request_` below.
+
+- ``success`` will be ``true``
+- ``predictor`` contains details on the prediction engine used such as the 
+  internal version number and the date the unix timestamp that the predictor was last updated.
+- ``teams`` contains two properties ``blue`` and ``red`` that are arrays 
+  with three keys containing the details of the pokemon for each prediction team.
+  
+  Each pokemon object will contain these properties:
+  
+  - ``dexNumber`` The pokedex id of the pokemon that was matched
+  - ``name`` The full name of the pokemon including subtypes like ``Arceus Water``
+  - ``visualizerIndex`` A text string that is the input needed match this pokemon when in a request 
+    URL used by `TPPVisuals`_
+  
+- ``speed_order`` is a collection of pokemon names and their speed number, sorted fastest to slowest.
+  All 6 pokemon are listed in the collection, they are NOT grouped by team.
+- ``prediction`` contains the following properties:
+
+  - ``winner`` The name of the team that is predicted to win.
+  - ``percentage`` The predicted win percentage for the specified team.
+  
+- ``play_by_play`` is an array that lists how the battle would proceed in a perfect environment.
+  Which pokemon defeats which and with how many moves.
+ 
+   
 Example: Successful prediction request
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -169,3 +198,4 @@ partial name matches for ``Char`` and therefore the request fails.
 	}
 
 .. _Beesafree’s battle predictor: https://www.reddit.com/r/twitchplayspokemon/comments/38249f/beesafrees_battle_predictor_pbrmm/
+.. _TPPVisuals http://tppvisuals.com
