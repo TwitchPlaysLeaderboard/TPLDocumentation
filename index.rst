@@ -10,6 +10,7 @@ stream.
    :maxdepth: 2
    
    getting_started
+   api_structure
    user
    match
    songs
