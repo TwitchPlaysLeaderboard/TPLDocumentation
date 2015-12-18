@@ -4,7 +4,7 @@ Endpoint: ``/match/``
 +------------------------------+------------------------------+
 | URL                          | Description                  |
 +==============================+==============================+
-| `/match/predict`__           | Predicts the                 |
+| /match/predict               | Predicts the                 |
 |                              | result of the                |
 |                              | match using                  |
 |                              | `Beesafree’s                 |
@@ -205,4 +205,3 @@ partial name matches for ``Char`` and therefore the request fails.
 
 .. _Beesafree’s battle predictor: https://www.reddit.com/r/twitchplayspokemon/comments/38249f/beesafrees_battle_predictor_pbrmm/
 .. _TPPVisuals: http://tppvisuals.com
-__ match_predict
