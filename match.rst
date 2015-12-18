@@ -38,12 +38,12 @@ Endpoint: ``/match/``
 
 ------------
 
-Endpoint: ``/match/predict/``
+Endpoint: ``/match/predict``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Description:* Predicts the result of a matchup using `Beesafree’s battle predictor`_.
 
-*Accepted Parameters:*
+*Accepts Parameters:*
 
 -  ``None``: Predicts the current matchup of pokemon, returns
    an error if the pokemon have not yet been revealed.
@@ -199,6 +199,40 @@ partial name matches for ``Char`` and therefore the request fails.
 			]
 		}
 	}
+
+------------
+
+Endpoint: ``/match/current``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Description:* Details of the current or last played match including pokemon and bets.
+
+*Accepts Parameters:* ``None``
+
+*Returns:*
+
+------------
+
+Endpoint: ``/match/[number]``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Description:* Details of the match specified by ``[number]`` including pokemon and bets.
+
+*Accepts Parameters:* ``[number]`` The match number to be loaded.
+
+*Returns:*
+
+------------
+
+Endpoint: ``/match/winrate``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Description:* Number of played matches and number of matches won for each pokemon.
+
+*Accepts Parameters:* ``None`` 
+
+*Returns:*
+
 
 .. _Beesafree’s battle predictor: https://www.reddit.com/r/twitchplayspokemon/comments/38249f/beesafrees_battle_predictor_pbrmm/
 .. _TPPVisuals: http://tppvisuals.com
