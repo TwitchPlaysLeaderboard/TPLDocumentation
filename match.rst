@@ -36,8 +36,8 @@ Endpoint: ``/match/``
 |                              | pokemon.                     |
 +------------------------------+------------------------------+
 
-``/match/predict/`` Endpoint
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Endpoint: ``/match/predict/``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Description:* Predicts the result of a matchup using `Beesafree’s battle predictor`_.
 
@@ -53,8 +53,8 @@ Endpoint: ``/match/``
    the pokemon has multiple forms you can use the form name after the pokedex
    id or in the full name **Example:** ``493water`` OR ``Arceus Water``
 
-Example: Valid prediction request
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example: Successful prediction request
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description:** Example of a valid prediction request with the returned result data.
 
@@ -124,8 +124,8 @@ Example: Valid prediction request
         ]
     }
 
-Example: Request with multiple possible matches
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example: Failed request with multiple possible matches
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description:** Example of a prediction error that returns multiple
 partial name matches for ``Char`` and therefore the request fails.
@@ -135,37 +135,37 @@ partial name matches for ``Char`` and therefore the request fails.
 
 ::
 
-{
-	"success": false,
-	"predictor": {
-		"version": null,
-		"last_modified": 1446407657
-	},
-	"error": "Multiple results found, please be more specific",
-	"error_detail": {
-		"Char": [
-			{
-				"dexNumber": 4,
-				"name": "Charmander",
-				"visualizerIndex": "4"
-			},
-			{
-				"dexNumber": 5,
-				"name": "Charmeleon",
-				"visualizerIndex": "5"
-			},
-			{
-				"dexNumber": 6,
-				"name": "Charizard",
-				"visualizerIndex": "6"
-			},
-			{
-				"dexNumber": 390,
-				"name": "Chimchar",
-				"visualizerIndex": "390"
-			}
-		]
+	{
+		"success": false,
+		"predictor": {
+			"version": null,
+			"last_modified": 1446407657
+		},
+		"error": "Multiple results found, please be more specific",
+		"error_detail": {
+			"Char": [
+				{
+					"dexNumber": 4,
+					"name": "Charmander",
+					"visualizerIndex": "4"
+				},
+				{
+					"dexNumber": 5,
+					"name": "Charmeleon",
+					"visualizerIndex": "5"
+				},
+				{
+					"dexNumber": 6,
+					"name": "Charizard",
+					"visualizerIndex": "6"
+				},
+				{
+					"dexNumber": 390,
+					"name": "Chimchar",
+					"visualizerIndex": "390"
+				}
+			]
+		}
 	}
-}
 
 .. _Beesafree’s battle predictor: https://www.reddit.com/r/twitchplayspokemon/comments/38249f/beesafrees_battle_predictor_pbrmm/
